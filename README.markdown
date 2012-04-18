@@ -1,8 +1,8 @@
 Jasmine Phantom
 ===============
 
-Jasmine Phantom provides a rake task that runs your jasmine specs via phanstomjs. It is adapted from the jasmine runner example that comes with
-phantom js. It requires jasmine `>= 1.2.0rc2`, which is only currency available via github.
+Jasmine Phantom provides a rake task that runs your jasmine specs via phantomjs. It is adapted from the jasmine runner example that comes with
+phantom js. It requires jasmine `>= 1.2.0rc2`, which is only currently available via GitHub.
 
 Installation
 ------------
@@ -18,7 +18,7 @@ Add jasmine 1.2.0rc2 and jasmine-phantom to your gemfile:
 
 and run `bundle install`.
 
-Then run `bundle exec rake jasmine` and check `http://localhost:8888/` to make sure you jasmine specs are passing.
+Then run `bundle exec rake jasmine` and check `http://localhost:8888/` to make sure your jasmine specs are passing.
 
 Download and install the appropriate [PhantomJS](http://code.google.com/p/phantomjs/downloads/list) for your platform.
 Make sure to add the directory with the `phantomjs` executable to your `PATH`.
