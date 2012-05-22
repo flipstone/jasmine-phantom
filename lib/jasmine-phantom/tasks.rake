@@ -12,7 +12,10 @@ namespace :jasmine do
       port = config.instance_variable_get :@jasmine_server_port
 
       script = File.join File.dirname(__FILE__), 'run-jasmine.js'
-      sh "phantomjs #{script} http://localhost:#{port}"
+
+      pid = Process.spawn "phantomjs #{script} http://localhost:#{port}"
+      _, status = Process.waitpid2 pid
+      exit(1) unless status.success?
     end
   end
 end
