@@ -14,7 +14,12 @@ namespace :jasmine do
       script = File.join File.dirname(__FILE__), 'run-jasmine.js'
 
       pid = Process.spawn "phantomjs #{script} http://localhost:#{port}"
-      _, status = Process.waitpid2 pid
+
+      begin
+        Thread.pass
+        sleep 0.1
+        wait_pid, status = Process.waitpid2 pid, Process::WNOHANG
+      end while wait_pid.nil?
       exit(1) unless status.success?
     end
   end
