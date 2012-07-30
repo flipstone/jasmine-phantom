@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Jasmine::Phantom::VERSION
   s.authors     = ["David Vollbracht"]
   s.email       = ["david@flipstone.com"]
+  s.license     = "MIT"
   s.homepage    = "http://github.com/flipstone/jasmine-phantom"
   s.summary     = %q{Run you jasmine specs from the commant line using phantomjs}
   s.description = %q{jasmine-phantom provides a rake task, jasmine:phantom:ci,
@@ -25,5 +26,5 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   s.add_runtime_dependency "rails", '>= 3.0'
-  s.add_runtime_dependency "jasmine", '>= 1.2.0rc2'
+  s.add_runtime_dependency "jasmine", '>= 1.2.0'
 end
