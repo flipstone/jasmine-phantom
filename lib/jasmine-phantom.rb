@@ -5,4 +5,4 @@ module Jasmine
   end
 end
 
-require File.join('jasmine-phantom', 'railtie')
+require File.join('jasmine-phantom', 'railtie') if Jasmine::Dependencies.rails3?
