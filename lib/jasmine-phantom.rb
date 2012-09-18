@@ -5,4 +5,5 @@ module Jasmine
   end
 end
 
+require "jasmine-phantom/server"
 require File.join('jasmine-phantom', 'railtie') if Jasmine::Dependencies.rails3?
