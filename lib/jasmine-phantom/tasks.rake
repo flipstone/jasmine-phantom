@@ -1,3 +1,5 @@
+require 'jasmine-phantom/server'
+
 namespace :jasmine do
   namespace :phantom do
     desc "Run jasmine specs using phantomjs and report the results"
