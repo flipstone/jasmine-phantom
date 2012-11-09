@@ -18,11 +18,11 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'jasmine', '= 1.2.1'
-  gem 'jasmine-phantom', path: '../..'
 end
 
 gem 'jquery-rails'
+gem 'jasmine', '= 1.2.1'
+gem 'jasmine-phantom', path: '../..'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
