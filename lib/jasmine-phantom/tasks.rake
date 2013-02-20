@@ -4,6 +4,7 @@ namespace :jasmine do
   namespace :phantom do
     desc "Run jasmine specs using phantomjs and report the results"
     task :ci => "jasmine:require" do
+      require 'posix-spawn'
       if Jasmine::VERSION < "1.3.0"
         jasmine_config_overrides = File.join(Jasmine::Config.new.project_root, 'spec', 'javascripts' ,'support' ,'jasmine_config.rb')
         require jasmine_config_overrides if File.exist?(jasmine_config_overrides)
@@ -12,7 +13,7 @@ namespace :jasmine do
       port = Jasmine::Phantom::Server.start
       script = File.join File.dirname(__FILE__), 'run-jasmine.js'
 
-      pid = Process.spawn "phantomjs #{script} http://localhost:#{port}"
+      pid = POSIX::Spawn.spawn("phantomjs", script, "http://localhost:#{port}")
 
       begin
         Thread.pass
