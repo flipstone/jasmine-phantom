@@ -6,7 +6,7 @@ module Jasmine
 
         case Jasmine::VERSION
         when '1.2.0' then start_1_2_0
-        when '1.2.1' then start_1_2_1
+        when '1.2.1'..'1.3.0' then start_1_2_1
         else start_latest
         end
       end

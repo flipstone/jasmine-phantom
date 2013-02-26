@@ -27,8 +27,9 @@ def run_jasmine_phantom_test_case(name)
 end
 
 task :test do
-  run_jasmine_phantom_test_case 'rails-3.2-jasmine-1.2.0'
+  run_jasmine_phantom_test_case 'rails-3.2-jasmine-1.3.0'
   run_jasmine_phantom_test_case 'rails-3.2-jasmine-1.2.1'
+  run_jasmine_phantom_test_case 'rails-3.2-jasmine-1.2.0'
 end
 
 task default: :test
