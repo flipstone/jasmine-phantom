@@ -26,5 +26,6 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   s.add_runtime_dependency "jasmine", '>= 1.2.0'
   s.add_runtime_dependency "posix-spawn"
+  s.add_runtime_dependency "phantomjs"
   s.add_development_dependency "rake", '>= 0.8'
 end
