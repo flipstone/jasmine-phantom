@@ -17,8 +17,8 @@ and run `bundle install`.
 
 Then run `bundle exec rake jasmine` and check `http://localhost:8888/` to make sure your jasmine specs are passing.
 
-Download and install the appropriate [PhantomJS](http://code.google.com/p/phantomjs/downloads/list) for your platform.
-Make sure to add the directory with the `phantomjs` executable to your `PATH`.
+This gem uses https://github.com/colszowka/phantomjs-gem to automatically download an appropriate PhantomJS instance
+to the machine.
 
 Finally, run `bundle exec rake jasmine:phantom:ci` and you should see output similar to:
 

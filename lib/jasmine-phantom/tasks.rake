@@ -1,4 +1,5 @@
 require 'jasmine-phantom/server'
+require 'phantomjs'
 
 namespace :jasmine do
   namespace :phantom do
@@ -15,7 +16,7 @@ namespace :jasmine do
       port = Jasmine::Phantom::Server.start
       script = File.join File.dirname(__FILE__), 'run-jasmine.js'
 
-      pid = POSIX::Spawn.spawn("phantomjs", script, "http://localhost:#{port}")
+      pid = POSIX::Spawn.spawn(Phantomjs.path, script, "http://localhost:#{port}")
 
       begin
         Thread.pass
